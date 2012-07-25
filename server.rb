@@ -17,7 +17,7 @@ get '/stream', provides: 'text/event-stream' do
     
     # Set callback to remove connection from array (fired when stream closes).
     out.callback do
-      connections.delete(connections)
+      connections.delete(out)
     end
 
     if not stream_started
